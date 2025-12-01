@@ -1,0 +1,78 @@
+/* index.css */
+:root {
+  /* 🎨 テーマカラーパレット: シェルティらしい温かみのある色 */
+  --primary-color: #ff9f6f;      /* 元気なオレンジ */
+  --accent-color: #ffcc5c;       /* 明るいイエロー */
+  --text-color: #5d4037;         /* 柔らかいこげ茶（黒の代わり） */
+  --bg-color: #fffaf0;           /* クリーム色の背景 */
+  --card-bg: #ffffff;            /* カードの白 */
+  --shadow: 0 8px 20px rgba(93, 64, 55, 0.08); /* ふんわりした影 */
+  
+  font-family: 'M PLUS Rounded 1c', sans-serif; /* 丸ゴシック */
+  line-height: 1.6;
+  font-weight: 400;
+  
+  /* 文字の色を柔らかく */
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  /* display: flex; place-items: center; を削除（スクロールサイトにするため） */
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: radial-gradient(#ffe4d6 1px, transparent 1px); /* 可愛いドット柄背景 */
+  background-size: 20px 20px;
+}
+
+/* リンクのスタイル */
+a {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+/* タイトルなど */
+h1, h2, h3 {
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+/* ボタンのリセットと基本スタイル */
+button {
+  border-radius: 50px; /* 完全な角丸（カプセル型） */
+  border: none;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(255, 159, 111, 0.4);
+}
+
+button:hover {
+  transform: translateY(-2px); /* ホバーで少し浮く */
+  box-shadow: 0 6px 15px rgba(255, 159, 111, 0.6);
+}
+
+/* 画像の基本設定 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* 画像の角を少し丸める */
+}

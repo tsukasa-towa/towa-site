@@ -399,3 +399,194 @@ footer a {
 .preparation-notice .button {
   margin-top: 20px;
 }
+
+/* App.css */
+
+/* ========================================================== */
+/* 9. Journeyページ (World Tour) スタイル */
+/* ========================================================== */
+
+/* 概要カード */
+.journey-summary .summary-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.journey-summary .summary-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  flex-grow: 1;
+  text-align: center;
+}
+
+.journey-summary .summary-card.primary {
+  border: 2px solid var(--primary-color);
+}
+
+.journey-summary .summary-card.secondary {
+  background-color: #ffeadb;
+}
+
+.journey-summary .large-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  margin: 0.5rem 0 0;
+}
+
+/* 進捗バー */
+.journey-progress {
+  margin: 40px auto;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 30px;
+  background-color: #eee;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffb380, var(--primary-color));
+  transition: width 1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.checkpoint-info {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* チェックポイント間の進捗 */
+.segment-progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.segment-start,
+.segment-end {
+  font-weight: 700;
+  white-space: nowrap;
+  width: 15%;
+}
+
+.segment-bar {
+  flex-grow: 1;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.segment-bar-fill {
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  transition: width 0.5s ease-out;
+}
+
+.distance-remaining {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* ルートマップ */
+.route-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.route-checkpoint {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border-left: 3px solid #ccc;
+  padding-left: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.route-checkpoint.passed {
+  border-left: 3px solid var(--primary-color);
+}
+
+.route-checkpoint:last-child {
+  border-left: none;
+  /* 最後の要素では線を非表示 */
+}
+
+.route-checkpoint .pin {
+  position: absolute;
+  left: -17px;
+  /* 線の中心にピンを配置 */
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.route-checkpoint h4 {
+  margin: 0;
+  color: #333;
+}
+
+.route-checkpoint.passed h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.route-checkpoint .distance-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.route-checkpoint .fact {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  .journey-summary .summary-grid {
+    flex-direction: column;
+  }
+
+  .journey-summary .large-number {
+    font-size: 1.8rem;
+  }
+}
+
+.map-container {
+  width: 100%;
+  margin: 20px 0;
+}

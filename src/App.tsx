@@ -9,12 +9,14 @@ import Profile from './pages/Profile.tsx';
 import Goods from './pages/Goods.tsx';
 import Spots from './pages/Spots.tsx';
 import Recipe from './pages/Recipe.tsx';
+import Journey from './pages/Journey.tsx'; // 💡 追加: Journeyページをインポート
 
 // 仮のナビゲーションバーコンポーネント
 const Navigation = () => (
   <nav className="main-nav">
     <Link to="/">🏠 HOME</Link>
     <Link to="/profile">👤 Profile</Link>
+    <Link to="/journey">🌍 World Tour</Link> {/* 💡 追加: World Tourのリンク */}
     <Link to="/goods">🎁 Goods</Link>
     <Link to="/spots">📍 Spots</Link>
     <Link to="/recipe">🍽️ Recipe</Link>
@@ -37,14 +39,19 @@ const Footer = () => (
 function App() {
   return (
     <BrowserRouter>
+      <SpeedInsights /> {/* 💡 修正: SpeedInsightsコンポーネントをRouter直下に配置 */}
       <Navigation />
       <div id="root-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/journey" element={<Journey />} /> {/* 💡 追加: Journeyルート */}
           <Route path="/goods" element={<Goods />} />
           <Route path="/spots" element={<Spots />} />
           <Route path="/recipe" element={<Recipe />} />
+          {/* Footerで参照されているプライバシーポリシーとサイトマップのルートも追加 */}
+          <Route path="/privacy" element={<div>プライバシーポリシーページ</div>} />
+          <Route path="/sitemap" element={<div>サイトマップページ</div>} />
         </Routes>
       </div>
       <Footer />

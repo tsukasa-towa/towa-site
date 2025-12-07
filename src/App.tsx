@@ -1,5 +1,6 @@
 // App.tsx
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import './App.css'; // App.cssは残し、全体のスタイルに利用
 
 // 各ページコンポーネントをインポート

@@ -138,9 +138,6 @@ const Goods = () => {
   // 💡 今後使ってみたい商品のリストデータ
   const wishListItems = [
     { name: "モノライフ 鹿の角", image: deerImage, description: "化学物質不使用で、長時間噛み続けられる高耐久トイ。興奮時のクールダウンにも期待。", link: "https://amzn.asia/d/0atbBqf" }, // 必須
-    { name: "モノライフ 鹿の角", image: deerImage, description: "化学物質不使用で、長時間噛み続けられる高耐久トイ。興奮時のクールダウンにも期待。", link: "https://amzn.asia/d/0atbBqf" }, // 必須
-    { name: "モノライフ 鹿の角", image: deerImage, description: "化学物質不使用で、長時間噛み続けられる高耐久トイ。興奮時のクールダウンにも期待。", link: "https://amzn.asia/d/0atbBqf" }, // 必須
-    { name: "モノライフ 鹿の角", image: deerImage, description: "化学物質不使用で、長時間噛み続けられる高耐久トイ。興奮時のクールダウンにも期待。", link: "https://amzn.asia/d/0atbBqf" }, // 必須
   ];
 
   // 💡 エラー対策＆コードの整理: ウィッシュリスト用のカードコンポーネント (レビューカードのスタイルを適用)

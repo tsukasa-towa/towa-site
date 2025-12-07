@@ -1,7 +1,9 @@
 // App.tsx
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { SpeedInsights } from "@vercel/speed-insights/react"
-import './App.css'; // App.cssは残し、全体のスタイルに利用
+// 💡 修正: インポートと同時に型をコメントアウトすることで、TSが値の利用チェックをスキップすることがあります
+import type { SpeedInsights } from "@vercel/speed-insights/react";
+import { SpeedInsights as SpeedInsightsComponent } from "@vercel/speed-insights/react";
+import './App.css';
 
 // 各ページコンポーネントをインポート
 import Home from './pages/Home.tsx';
@@ -39,7 +41,7 @@ const Footer = () => (
 function App() {
   return (
     <BrowserRouter>
-      <SpeedInsights /> {/* 💡 修正: SpeedInsightsコンポーネントをRouter直下に配置 */}
+      <SpeedInsightsComponent /> {/* 💡 修正: SpeedInsightsコンポーネントをRouter直下に配置 */}
       <Navigation />
       <div id="root-content">
         <Routes>

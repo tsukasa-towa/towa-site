@@ -1,5 +1,4 @@
 // src/pages/Recipe.tsx
-import React from 'react';
 
 const Recipe = () => {
   interface RecipeCardProps {
@@ -20,9 +19,9 @@ const Recipe = () => {
           <span className="meta-tag time">調理時間: {time}</span>
           <span className="meta-tag target">対象: {target}</span>
         </div>
-        
+
         <p><strong>栄養ポイント・効能:</strong> {efficacy}</p>
-        
+
         <div className="ingredients-list">
           <h4>材料リスト（分量）</h4>
           <ul>
@@ -32,7 +31,7 @@ const Recipe = () => {
             {/* ... その他材料 ... */}
           </ul>
         </div>
-        
+
         <div className="instructions">
           <h4>作り方（ステップ）</h4>
           {/* [Step-by-step photos placeholder] */}
@@ -47,7 +46,7 @@ const Recipe = () => {
           {/* [獣医師監修マーク（可能なら）] */}
           <p style={{ color: 'red', fontWeight: 'bold' }}>⚠️ 注意事項: 必ず与えてはいけない食材（ネギ類、チョコレートなど）を確認してください。</p>
         </div>
-        
+
         <a href="#">詳細を見る（実食動画・写真）</a>
       </div>
     </div>
@@ -67,13 +66,13 @@ const Recipe = () => {
       <nav className="recipe-category-nav">
         {/* Daily Menu, Special Occasion, Healthy Options, Cooking Tips へのアンカーリンク */}
       </nav>
-      
+
       <div className="content-grid">
         {sampleRecipes.map((recipe, index) => (
           <RecipeCard key={index} {...recipe} />
         ))}
       </div>
-      
+
       <section className="cooking-tips section-block">
         <h2>Cooking Tips</h2>
         <p>食材の下処理の方法や、手作りご飯の冷凍保存のコツを紹介しています。</p>

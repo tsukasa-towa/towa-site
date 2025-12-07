@@ -1,5 +1,5 @@
 // src/pages/Spots.tsx
-import React from 'react';
+
 
 const Spots = () => {
   interface SpotCardProps {
@@ -17,34 +17,34 @@ const Spots = () => {
     };
   }
 
-  const SpotCard = ({ name, address, rating, conditions }:SpotCardProps) => (
+  const SpotCard = ({ name, address, rating, conditions }: SpotCardProps) => (
     <div className="content-card spot-card">
       <img className="card-image" src={`/spots/${name}.jpg`} alt={name} />
       <div className="card-body">
         <h2>{name}</h2>
         <p>📍 {address}</p>
         <p>⭐️ 総合評価: {rating} / 5</p>
-        
+
         <div className="conditions-icons">
           <span className="icon-tag">{conditions.leash}</span>
           <span className="icon-tag">{conditions.dogSize}</span>
           <span className="icon-tag">{conditions.area}</span>
           <span className="icon-tag">{conditions.vaccine ? '予防接種証明必要' : '証明不要'}</span>
         </div>
-        
+
         <div className="google-map-placeholder" style={{ backgroundColor: '#eee', height: '150px', margin: '10px 0' }}>
           [Googleマップ埋め込みプレースホルダー]
         </div>
 
         <h4>訪問レポート</h4>
         <p>訪問日: 2025年X月X日 / 混雑度: {conditions.crowdedness}</p>
-        
+
         <h5>良かったポイント</h5>
         <p>・{conditions.goodPoints}</p>
-        
+
         <h5>注意点</h5>
         <p>・{conditions.badPoints}</p>
-        
+
         <a href="#">詳細を見る（写真5〜8枚）</a>
       </div>
     </div>

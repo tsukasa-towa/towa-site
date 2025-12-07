@@ -1,6 +1,6 @@
 // src/pages/Journey.tsx
 import React, { useMemo, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // 💡 修正: Linkを使用し、TSエラーを解消
 // Google Maps ライブラリをインポート
 import { GoogleMap, useJsApiLoader, Polyline } from '@react-google-maps/api';
 
@@ -272,6 +272,13 @@ const Journey: React.FC = () => {
           ))}
         </div>
       </section>
+
+      {/* 💡 修正: Linkの使用によりTSエラーを解消し、ホームへ戻る機能を追加 */}
+      <div style={{ textAlign: 'center', margin: '40px 0' }}>
+        <Link to="/" className="button primary large">
+          🏠 ホームへ戻る
+        </Link>
+      </div>
 
     </div>
   );
